@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MAPPINGS>
-	<MAP title="Magnetic 176" partnumber="10008036" group="Magnetic" configuration="" phase=""></MAP>
+	<MAP title="Magnetic FD5" partnumber="10009455" group="Magnetic" configuration="FD5" phase="*"></MAP>
 </MAPPINGS>
