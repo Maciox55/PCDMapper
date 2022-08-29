@@ -34,11 +34,16 @@
             this.snTextBox = new System.Windows.Forms.TextBox();
             this.startBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.matchStatusLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTextBox
             // 
-            this.pnTextBox.Location = new System.Drawing.Point(11, 70);
+            this.pnTextBox.Location = new System.Drawing.Point(11, 104);
             this.pnTextBox.Name = "pnTextBox";
             this.pnTextBox.Size = new System.Drawing.Size(177, 20);
             this.pnTextBox.TabIndex = 0;
@@ -46,33 +51,33 @@
             // pnLabel
             // 
             this.pnLabel.AutoSize = true;
-            this.pnLabel.Location = new System.Drawing.Point(11, 54);
+            this.pnLabel.Location = new System.Drawing.Point(11, 87);
             this.pnLabel.Name = "pnLabel";
-            this.pnLabel.Size = new System.Drawing.Size(66, 13);
+            this.pnLabel.Size = new System.Drawing.Size(70, 13);
             this.pnLabel.TabIndex = 1;
-            this.pnLabel.Text = "Part Number";
+            this.pnLabel.Text = "Part Number*";
             // 
             // snLabel
             // 
             this.snLabel.AutoSize = true;
-            this.snLabel.Location = new System.Drawing.Point(191, 54);
+            this.snLabel.Location = new System.Drawing.Point(191, 87);
             this.snLabel.Name = "snLabel";
-            this.snLabel.Size = new System.Drawing.Size(73, 13);
+            this.snLabel.Size = new System.Drawing.Size(77, 13);
             this.snLabel.TabIndex = 3;
-            this.snLabel.Text = "Serial Number";
+            this.snLabel.Text = "Serial Number*";
             // 
             // snTextBox
             // 
             this.snTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.snTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.snTextBox.Location = new System.Drawing.Point(194, 70);
+            this.snTextBox.Location = new System.Drawing.Point(194, 103);
             this.snTextBox.Name = "snTextBox";
             this.snTextBox.Size = new System.Drawing.Size(146, 20);
             this.snTextBox.TabIndex = 2;
             // 
             // startBtn
             // 
-            this.startBtn.Location = new System.Drawing.Point(355, 68);
+            this.startBtn.Location = new System.Drawing.Point(355, 101);
             this.startBtn.Name = "startBtn";
             this.startBtn.Size = new System.Drawing.Size(75, 23);
             this.startBtn.TabIndex = 4;
@@ -92,20 +97,62 @@
             this.label1.Text = "Enter Part Number and Serial Number of the machine you are about to run PCDoctor " +
     "on.";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Tester";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(11, 52);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(177, 20);
+            this.textBox1.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.matchStatusLabel);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.startBtn);
+            this.panel1.Controls.Add(this.snLabel);
+            this.panel1.Controls.Add(this.pnLabel);
+            this.panel1.Controls.Add(this.snTextBox);
+            this.panel1.Controls.Add(this.pnTextBox);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(448, 163);
+            this.panel1.TabIndex = 8;
+            // 
+            // matchStatusLabel
+            // 
+            this.matchStatusLabel.AutoSize = true;
+            this.matchStatusLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.matchStatusLabel.Location = new System.Drawing.Point(12, 141);
+            this.matchStatusLabel.Name = "matchStatusLabel";
+            this.matchStatusLabel.Size = new System.Drawing.Size(49, 13);
+            this.matchStatusLabel.TabIndex = 8;
+            this.matchStatusLabel.Text = "Matched";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 100);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.startBtn);
-            this.Controls.Add(this.snLabel);
-            this.Controls.Add(this.snTextBox);
-            this.Controls.Add(this.pnLabel);
-            this.Controls.Add(this.pnTextBox);
+            this.ClientSize = new System.Drawing.Size(448, 163);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "PCD Mapper";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +166,10 @@
         private System.Windows.Forms.TextBox snTextBox;
         private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label matchStatusLabel;
     }
 }
 
