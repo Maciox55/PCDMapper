@@ -46,11 +46,11 @@ namespace PCDMapper.Classes
         {
             try
             {
-                MessageBox.Show(appPathAbsolute);
+                MessageBox.Show(appPathAbsolute + arguments);
                 process.StartInfo.FileName ="cmd.exe";
-                process.StartInfo.Arguments = "/C " + appPathAbsolute+arguments;
-
+                process.StartInfo.Arguments = @"" + appPathAbsolute + " /C " + arguments;
                 process.Start();
+                process.WaitForExit();
 
             }
             catch (Exception e)
