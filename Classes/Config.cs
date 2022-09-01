@@ -25,10 +25,12 @@ namespace PCDMapper.Classes
 
 
 
+
+
         private Config() {
             Console.WriteLine("Initialized Config Singleton");
-            string text = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config.xml"));
-            XElement configstring = XElement.Load(@"Config.xml");
+            string text = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "MapperConfig.xml"));
+            XElement configstring = XElement.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "MapperConfig.xml"));
             ParseConfigFile(configstring);
 
         }
@@ -70,8 +72,8 @@ namespace PCDMapper.Classes
         private void ParseConfigFile(XElement xmlContent) {
             try
             {
-                masterPath = xmlContent.Element("MASTERPATH").Value;
-                outputPath = xmlContent.Element("SCRIPTPATH").Value;
+                masterPath = xmlContent.Element("MAPPINGFILE").Value;
+                outputPath = xmlContent.Element("SCRIPT").Value;
 
                 pcd = xmlContent.Element("PCDR").Attribute("pcd").Value;
                 pcdgui = xmlContent.Element("PCDR").Attribute("pcdgui").Value;
@@ -83,7 +85,7 @@ namespace PCDMapper.Classes
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error Parsing Config.xml file! Check for errors: " + e.Message);
+                MessageBox.Show("Error Parsing Config.xml file! Check for errors: " + e.Message+  e.StackTrace);
             }
         }
     }

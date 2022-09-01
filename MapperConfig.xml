@@ -3,8 +3,8 @@
 <!-- CONFIG FILE FOR PCDMAPPER ONLY, THIS STRUCTURE HAS TO STAY EXACTLY THE SAME, CAN ONLY CHANGE MASTER AND SCRIPT PATHS
 LEAVE PCDR ELEMENT UNCHANGED-->
 <APPCONFIG>
-	<MASTERPATH>\\TEMPSERVER\Images\Mactest\</MASTERPATH>
-	<SCRIPTPATH>"\\TEMPSERVER\Images\PCDOCTOR\Script Log Output\"</SCRIPTPATH>
+	<MAPPINGFILE>\\WDS-PXE-SERVER\Deployment\Macadamia\Mappings.xml</MAPPINGFILE>
+	<SCRIPT>\\WDS-PXE-SERVER\Deployment\Macadamia\PCDoctor-Testlist-Output\</SCRIPT>
 	<!-- Change BaseParams to include UUT in the future -->
 	<PCDR pcd="pcd.exe " pcdgui="pcdgui.exe " path="C:\Users\SAI\Desktop\pcdoctor\bin\" baseParams="-s 10.0.104.245" logParams="list -d -t -s 10.0.104.245"/>
 </APPCONFIG>

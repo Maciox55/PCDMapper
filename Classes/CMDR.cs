@@ -48,18 +48,15 @@ namespace PCDMapper.Classes
             {
                 MessageBox.Show(appPathAbsolute + arguments);
                 process.StartInfo.FileName ="cmd.exe";
-                process.StartInfo.Arguments = @"" + appPathAbsolute + " /C " + arguments;
+                process.StartInfo.Arguments = @" /C " + appPathAbsolute + "" + arguments;
                 process.Start();
                 process.WaitForExit();
-
             }
             catch (Exception e)
             {
                 MessageBox.Show("ERROR: " + e.Message);
                 
             }
-
-
         }
 
         public void RunApp(string path, string param)

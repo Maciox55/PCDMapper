@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Binding.cs" />
     <Compile Include="Classes\CMDR.cs" />
     <Compile Include="Classes\Config.cs" />
     <Compile Include="Form1.cs">
@@ -84,7 +85,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Config.xml">
+    <Content Include="MapperConfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Mappings.xml" />
