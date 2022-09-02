@@ -35,7 +35,7 @@
             this.startBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.testerName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.matchStatusLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -111,12 +111,12 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Tester";
             // 
-            // textBox1
+            // testerName
             // 
-            this.textBox1.Location = new System.Drawing.Point(11, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 7;
+            this.testerName.Location = new System.Drawing.Point(11, 104);
+            this.testerName.Name = "testerName";
+            this.testerName.Size = new System.Drawing.Size(177, 20);
+            this.testerName.TabIndex = 7;
             // 
             // panel1
             // 
@@ -130,7 +130,7 @@
             this.panel1.Controls.Add(this.pnLabel);
             this.panel1.Controls.Add(this.snTextBox);
             this.panel1.Controls.Add(this.pnTextBox);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.testerName);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -201,7 +201,7 @@
         private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox testerName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label matchStatusLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;

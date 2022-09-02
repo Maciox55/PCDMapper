@@ -1,12 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MAPPINGS>
 	<!-- MAGNETIC -->
-	<MAP title="Magnetic FD5" partnumber="10009455" group="Magnetic" configuration="FD5" phase="*" />
+	<MAP title="Magnetic FD5" partnumber="10009455" group="Magnetic" configuration="10009455" phase="*" />
 	<MAP title="Magnetic 176" partnumber="10008036" group="Magnetic" configuration="176" phase="*" />
 
 	<!-- SPEEDLINE -->
+	<MAP title="Speedline 2007620" partnumber="2007620" group="Speedline" configuration="2007620" phase="1U" />
+	<MAP title="Speedline 2007621" partnumber="2007621" group="Speedline" configuration="2007621" phase="desktop" />
+	<MAP title="Speedline 2007622" partnumber="2007622" group="Speedline" configuration="2007622" phase="desktop" />
+	<MAP title="Speedline 2007624" partnumber="2007624" group="Speedline" configuration="2007624" phase="1U" />
+	
+	<MAP title="Speedline 1024100" partnumber="1024100" group="Speedline" configuration="1024100" phase="desktop" />
+	<MAP title="Speedline 1024099" partnumber="1024099" group="Speedline" configuration="1024099" phase="desktop" />
+	<MAP title="Speedline 1024098" partnumber="1024098" group="Speedline" configuration="1024098" phase="1U" />
 
 	<!-- UNHOLTZ -->
-
+	<MAP title="Unholtz" partnumber="10009479" group="Unholtz" configuration="10009479" phase="1U" />
+	
 	<!-- EDAX -->
+	
+	
 </MAPPINGS>

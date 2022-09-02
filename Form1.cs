@@ -46,7 +46,8 @@ namespace PCDMapper
         {
             if (pnTextBox.Text != String.Empty && snTextBox.Text != String.Empty && matched)
             {
-                string args = config.GetBaseParams() + " -id " + snTextBox.Text + " -g " + matchedBinding.groupp + " -c " + matchedBinding.configuration + " -p " + matchedBinding.phase;
+                string args = config.GetBaseParams() + " -id " + snTextBox.Text + " -g " + matchedBinding.groupp + " -c " + matchedBinding.configuration + " -p " + matchedBinding.phase + " -e \"TESTER="+testerName.Text + ",SERIAL_NUMBER=" + snTextBox.Text + ",PART_NUMBER="+pnTextBox.Text+ "\"";
+                MessageBox.Show(args);
                 CMDR.GetProcess().RunCommand(config.GetPCDGuiPath(), args);
             }
             else {
