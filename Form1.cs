@@ -22,10 +22,13 @@ namespace PCDMapper
         public bool matched = false;
         public Binding matchedBinding;
 
+        public Form1 form1;
+
         public Form1()
         {
             InitializeComponent();
             //MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory);
+            form1 = this;
             config = Config.Instance();
             bindings = ParseBindings(config.GetMasterPath());
 
@@ -130,6 +133,19 @@ namespace PCDMapper
                 matchStatusLabel.ForeColor = Color.Gray;
                 matchStatusLabel.Text = "No match found";
                 matched = false;
+            }
+        }
+
+        private void newMappingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((Application.OpenForms["AddMapping"] as AddMapping) != null)
+            {
+                //Form is already open
+            }
+            else
+            {
+                AddMapping addMappingForm = new AddMapping(this);
+                addMappingForm.Show();
             }
         }
     }

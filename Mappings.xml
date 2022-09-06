@@ -9,15 +9,15 @@
 	<MAP title="Speedline 2007621" partnumber="2007621" group="Speedline" configuration="2007621" phase="desktop" />
 	<MAP title="Speedline 2007622" partnumber="2007622" group="Speedline" configuration="2007622" phase="desktop" />
 	<MAP title="Speedline 2007624" partnumber="2007624" group="Speedline" configuration="2007624" phase="1U" />
-	
+
 	<MAP title="Speedline 1024100" partnumber="1024100" group="Speedline" configuration="1024100" phase="desktop" />
 	<MAP title="Speedline 1024099" partnumber="1024099" group="Speedline" configuration="1024099" phase="desktop" />
 	<MAP title="Speedline 1024098" partnumber="1024098" group="Speedline" configuration="1024098" phase="1U" />
 
 	<!-- UNHOLTZ -->
 	<MAP title="Unholtz" partnumber="10009479" group="Unholtz" configuration="10009479" phase="1U" />
-	
+
 	<!-- EDAX -->
-	
-	
+
+
 </MAPPINGS>

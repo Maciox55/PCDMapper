@@ -41,6 +41,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.scriptGenerationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runADHOCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.pnTextBox.Location = new System.Drawing.Point(11, 156);
             this.pnTextBox.Name = "pnTextBox";
             this.pnTextBox.Size = new System.Drawing.Size(177, 20);
-            this.pnTextBox.TabIndex = 0;
+            this.pnTextBox.TabIndex = 1;
             this.pnTextBox.TextChanged += new System.EventHandler(this.pnTextBox_TextChanged);
             // 
             // pnLabel
@@ -116,7 +117,7 @@
             this.testerName.Location = new System.Drawing.Point(11, 104);
             this.testerName.Name = "testerName";
             this.testerName.Size = new System.Drawing.Size(177, 20);
-            this.testerName.TabIndex = 7;
+            this.testerName.TabIndex = 0;
             // 
             // panel1
             // 
@@ -152,7 +153,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.scriptGenerationToolStripMenuItem,
-            this.runADHOCToolStripMenuItem});
+            this.runADHOCToolStripMenuItem,
+            this.newMappingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(448, 24);
@@ -172,6 +174,13 @@
             this.runADHOCToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.runADHOCToolStripMenuItem.Text = "Run Unmapped";
             this.runADHOCToolStripMenuItem.Click += new System.EventHandler(this.runADHOCToolStripMenuItem_Click);
+            // 
+            // newMappingToolStripMenuItem
+            // 
+            this.newMappingToolStripMenuItem.Name = "newMappingToolStripMenuItem";
+            this.newMappingToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.newMappingToolStripMenuItem.Text = "New Mapping";
+            this.newMappingToolStripMenuItem.Click += new System.EventHandler(this.newMappingToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -207,6 +216,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem scriptGenerationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem runADHOCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newMappingToolStripMenuItem;
     }
 }
 

@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMapping.Designer.cs">
+      <DependentUpon>AddMapping.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Binding.cs" />
     <Compile Include="Classes\CMDR.cs" />
     <Compile Include="Classes\Config.cs" />
@@ -59,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddMapping.resx">
+      <DependentUpon>AddMapping.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,7 +97,9 @@
     <Content Include="MapperConfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Mappings.xml" />
+    <Content Include="Mappings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

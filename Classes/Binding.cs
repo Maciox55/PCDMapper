@@ -18,6 +18,7 @@ namespace PCDMapper.Classes
 
         }
 
+        override
         public string ToString() {
             return title + " - " + partNumber + " | Mapping: " + groupp + "." + configuration + "." + phase;
         }
