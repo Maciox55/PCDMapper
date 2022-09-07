@@ -47,8 +47,9 @@ namespace PCDMapper.Classes
             try
             {
                 MessageBox.Show(appPathAbsolute + arguments);
-                process.StartInfo.FileName ="cmd.exe";
-                process.StartInfo.Arguments = @" /C " + appPathAbsolute + "" + arguments;
+                process.StartInfo.FileName = @"C:\Users\SAI\Desktop\pcdoctor\bin\pcdgui.exe";
+                //process.StartInfo.WorkingDirectory = @"C:\Users\SAI\Desktop\pcdoctor\bin\";
+                process.StartInfo.Arguments = arguments;
                 process.Start();
                 process.WaitForExit();
             }
