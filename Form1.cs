@@ -54,7 +54,7 @@ namespace PCDMapper
                 string args = config.GetBaseParams() + " -id " + snTextBox.Text + " -g " + matchedBinding.groupp + " -c " + matchedBinding.configuration + " -p " + matchedBinding.phase;
 
                 //MessageBox.Show(args);
-                CMDR.GetProcess().RunCommand(config.GetPath(), args);
+                CMDR.GetProcess().RunCommand(config.GetPath(), @"/k pcdgui.exe " + args);
             }
             else {
                 MessageBox.Show("Invalid form or no matching entries found!");
@@ -74,7 +74,8 @@ namespace PCDMapper
             if (pnTextBox.Text != String.Empty)
             {
                 string args = config.GetLogParams() + " > " + config.GetOutputPath() + pnTextBox.Text + ".txt";
-                CMDR.GetProcess().RunCommand(config.GetPCDPath(), args);
+                Console.WriteLine(args);
+                CMDR.GetProcess().RunCommand(config.GetPath(), @"/c pcd.exe " + args);
 
                 //MessageBox.Show(config.GetPCDPath()+args);
                 //MessageBox.Show(config.GetPCD()+pnTextBox.Text+".txt");
@@ -83,7 +84,9 @@ namespace PCDMapper
             else
             {
                 string args = config.GetLogParams() + " > " + config.GetOutputPath() + "text.txt";
-                CMDR.GetProcess().RunCommand(config.GetPCDPath(), args);
+                Console.WriteLine(args);
+
+                CMDR.GetProcess().RunCommand(config.GetPath(), @"/c pcd.exe " + args);
                 //MessageBox.Show(config.GetPCDPath()+args);
             }
         }
@@ -91,7 +94,7 @@ namespace PCDMapper
         private void runADHOCToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string args = config.GetBaseParams();
-            CMDR.GetProcess().RunCommand(config.GetPCDGuiPath(), args);
+            CMDR.GetProcess().RunCommand(config.GetPath(), @"/c pcdgui.exe " + args);
         }
 
         public List<Binding> ParseBindings(string xml) {

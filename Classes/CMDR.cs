@@ -53,7 +53,7 @@ namespace PCDMapper.Classes
                 process.StartInfo.Verb = "runas";
 
                 process.StartInfo.WorkingDirectory = appPathAbsolute;
-                process.StartInfo.Arguments = @"/k pcdgui.exe " + arguments;
+                process.StartInfo.Arguments =  arguments;
 
                 //process.StartInfo.FileName = "pcdgui.exe";
                 //process.StartInfo.WorkingDirectory = @"C:\Users\SAI\Desktop\pcdoctor\bin\";
