@@ -46,10 +46,21 @@ namespace PCDMapper.Classes
         {
             try
             {
-                MessageBox.Show(appPathAbsolute + arguments);
-                process.StartInfo.FileName = @"C:\Users\SAI\Desktop\pcdoctor\bin\pcdgui.exe";
+                //MessageBox.Show(appPathAbsolute + arguments);
+                Console.WriteLine(appPathAbsolute);
+                
+                process.StartInfo.FileName = "cmd.exe";
+                process.StartInfo.Verb = "runas";
+
+                process.StartInfo.WorkingDirectory = appPathAbsolute;
+                process.StartInfo.Arguments = @"/k pcdgui.exe " + arguments;
+
+                //process.StartInfo.FileName = "pcdgui.exe";
                 //process.StartInfo.WorkingDirectory = @"C:\Users\SAI\Desktop\pcdoctor\bin\";
-                process.StartInfo.Arguments = arguments;
+                // Argument structure 'uut -s 10.0.104.245 -id {serial_number} -g {group} -c {config} -p {phase}'
+
+                //process.StartInfo.Arguments = arguments;
+
                 process.Start();
                 process.WaitForExit();
             }
