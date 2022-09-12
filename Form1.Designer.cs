@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnTextBox = new System.Windows.Forms.TextBox();
             this.pnLabel = new System.Windows.Forms.Label();
             this.snLabel = new System.Windows.Forms.Label();
@@ -39,9 +40,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.matchStatusLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.newMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pCDoctorToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scriptGenerationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runADHOCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainFormToolTips = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +55,8 @@
             this.pnTextBox.Name = "pnTextBox";
             this.pnTextBox.Size = new System.Drawing.Size(177, 20);
             this.pnTextBox.TabIndex = 1;
+            this.mainFormToolTips.SetToolTip(this.pnTextBox, "Part Number of the unit you are testing, used to find the necessary test script b" +
+        "inding.");
             this.pnTextBox.TextChanged += new System.EventHandler(this.pnTextBox_TextChanged);
             // 
             // pnLabel
@@ -74,12 +79,11 @@
             // 
             // snTextBox
             // 
-            this.snTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.snTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.snTextBox.Location = new System.Drawing.Point(194, 155);
             this.snTextBox.Name = "snTextBox";
             this.snTextBox.Size = new System.Drawing.Size(146, 20);
             this.snTextBox.TabIndex = 2;
+            this.mainFormToolTips.SetToolTip(this.snTextBox, "Serial Number of the unit being tested as it will appear on the test report.");
             // 
             // startBtn
             // 
@@ -118,6 +122,7 @@
             this.testerName.Name = "testerName";
             this.testerName.Size = new System.Drawing.Size(177, 20);
             this.testerName.TabIndex = 0;
+            this.mainFormToolTips.SetToolTip(this.testerName, "Tester Name as It will appear on the test report.");
             // 
             // panel1
             // 
@@ -152,7 +157,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.scriptGenerationToolStripMenuItem,
+            this.pCDoctorToolsToolStripMenuItem,
             this.runADHOCToolStripMenuItem,
             this.newMappingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -161,10 +166,25 @@
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // newMappingToolStripMenuItem
+            // 
+            this.newMappingToolStripMenuItem.Name = "newMappingToolStripMenuItem";
+            this.newMappingToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.newMappingToolStripMenuItem.Text = "New Mapping";
+            this.newMappingToolStripMenuItem.Click += new System.EventHandler(this.newMappingToolStripMenuItem_Click);
+            // 
+            // pCDoctorToolsToolStripMenuItem
+            // 
+            this.pCDoctorToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scriptGenerationToolStripMenuItem});
+            this.pCDoctorToolsToolStripMenuItem.Name = "pCDoctorToolsToolStripMenuItem";
+            this.pCDoctorToolsToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.pCDoctorToolsToolStripMenuItem.Text = "PCDoctor Tools";
+            // 
             // scriptGenerationToolStripMenuItem
             // 
             this.scriptGenerationToolStripMenuItem.Name = "scriptGenerationToolStripMenuItem";
-            this.scriptGenerationToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.scriptGenerationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.scriptGenerationToolStripMenuItem.Text = "Generate Script Log";
             this.scriptGenerationToolStripMenuItem.Click += new System.EventHandler(this.scriptGenerationToolStripMenuItem_Click);
             // 
@@ -174,13 +194,6 @@
             this.runADHOCToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.runADHOCToolStripMenuItem.Text = "Run Unmapped";
             this.runADHOCToolStripMenuItem.Click += new System.EventHandler(this.runADHOCToolStripMenuItem_Click);
-            // 
-            // newMappingToolStripMenuItem
-            // 
-            this.newMappingToolStripMenuItem.Name = "newMappingToolStripMenuItem";
-            this.newMappingToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.newMappingToolStripMenuItem.Text = "New Mapping";
-            this.newMappingToolStripMenuItem.Click += new System.EventHandler(this.newMappingToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -214,9 +227,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label matchStatusLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem newMappingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pCDoctorToolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scriptGenerationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem runADHOCToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newMappingToolStripMenuItem;
+        private System.Windows.Forms.ToolTip mainFormToolTips;
     }
 }
 

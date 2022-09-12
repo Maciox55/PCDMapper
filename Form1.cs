@@ -69,7 +69,7 @@ namespace PCDMapper
         {
             if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Lel");
+                //MessageBox.Show("Lel");
             }
         }
 

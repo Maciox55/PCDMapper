@@ -39,8 +39,7 @@ namespace PCDMapper
                     newBinding.phase = configInput.Text;
 
                     Config.Instance().AddMapping(newBinding);
-
-                    form.ParseBindings(Config.Instance().GetMasterPath());
+                    form.bindings = form.ParseBindings(Config.Instance().GetMasterPath());
 
                     this.Close();
 
