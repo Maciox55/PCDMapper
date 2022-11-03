@@ -36,7 +36,7 @@ namespace PCDMapper
                     newBinding.partNumber = partNumberInput.Text;
                     newBinding.groupp = groupInput.Text;
                     newBinding.configuration = configInput.Text;
-                    newBinding.phase = configInput.Text;
+                    newBinding.phase = phaseInput.Text;
 
                     Config.Instance().AddMapping(newBinding);
                     form.bindings = form.ParseBindings(Config.Instance().GetMasterPath());
