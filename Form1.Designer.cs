@@ -40,11 +40,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.matchStatusLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pCDoctorToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scriptGenerationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.runADHOCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newMappingToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.runADHOCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainFormToolTips = new System.Windows.Forms.ToolTip(this.components);
+            this.editMappingxmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshMappingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -150,50 +153,74 @@
             this.matchStatusLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.matchStatusLabel.Location = new System.Drawing.Point(12, 186);
             this.matchStatusLabel.Name = "matchStatusLabel";
-            this.matchStatusLabel.Size = new System.Drawing.Size(89, 13);
+            this.matchStatusLabel.Size = new System.Drawing.Size(83, 13);
             this.matchStatusLabel.TabIndex = 8;
-            this.matchStatusLabel.Text = "No matche found";
+            this.matchStatusLabel.Text = "No match found";
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pCDoctorToolsToolStripMenuItem,
-            this.runADHOCToolStripMenuItem,
-            this.newMappingToolStripMenuItem});
+            this.newMappingToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(448, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // pCDoctorToolsToolStripMenuItem
+            // newMappingToolStripMenuItem
             // 
-            this.pCDoctorToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.scriptGenerationToolStripMenuItem});
-            this.pCDoctorToolsToolStripMenuItem.Name = "pCDoctorToolsToolStripMenuItem";
-            this.pCDoctorToolsToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
-            this.pCDoctorToolsToolStripMenuItem.Text = "PCDoctor Tools";
+            this.newMappingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newMappingToolStripMenuItem1,
+            this.editMappingxmlToolStripMenuItem,
+            this.refreshMappingsToolStripMenuItem});
+            this.newMappingToolStripMenuItem.Name = "newMappingToolStripMenuItem";
+            this.newMappingToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.newMappingToolStripMenuItem.Text = "Tools";
             // 
-            // scriptGenerationToolStripMenuItem
+            // newMappingToolStripMenuItem1
             // 
-            this.scriptGenerationToolStripMenuItem.Name = "scriptGenerationToolStripMenuItem";
-            this.scriptGenerationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.scriptGenerationToolStripMenuItem.Text = "Generate Script Log";
-            this.scriptGenerationToolStripMenuItem.Click += new System.EventHandler(this.scriptGenerationToolStripMenuItem_Click);
+            this.newMappingToolStripMenuItem1.Name = "newMappingToolStripMenuItem1";
+            this.newMappingToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.newMappingToolStripMenuItem1.Text = "New Mapping";
+            this.newMappingToolStripMenuItem1.Click += new System.EventHandler(this.newMappingToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.runADHOCToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(100, 20);
+            this.toolStripMenuItem1.Text = "PCDoctor Tools";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "Generate Script Log";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.scriptGenerationToolStripMenuItem_Click);
             // 
             // runADHOCToolStripMenuItem
             // 
             this.runADHOCToolStripMenuItem.Name = "runADHOCToolStripMenuItem";
-            this.runADHOCToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.runADHOCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.runADHOCToolStripMenuItem.Text = "Run Unmapped";
             this.runADHOCToolStripMenuItem.Click += new System.EventHandler(this.runADHOCToolStripMenuItem_Click);
             // 
-            // newMappingToolStripMenuItem
+            // editMappingxmlToolStripMenuItem
             // 
-            this.newMappingToolStripMenuItem.Name = "newMappingToolStripMenuItem";
-            this.newMappingToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.newMappingToolStripMenuItem.Text = "New Mapping";
-            this.newMappingToolStripMenuItem.Click += new System.EventHandler(this.newMappingToolStripMenuItem_Click);
+            this.editMappingxmlToolStripMenuItem.Name = "editMappingxmlToolStripMenuItem";
+            this.editMappingxmlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editMappingxmlToolStripMenuItem.Text = "Edit Mappings.xml";
+            this.editMappingxmlToolStripMenuItem.Click += new System.EventHandler(this.editMappingxmlToolStripMenuItem_Click);
+            // 
+            // refreshMappingsToolStripMenuItem
+            // 
+            this.refreshMappingsToolStripMenuItem.Name = "refreshMappingsToolStripMenuItem";
+            this.refreshMappingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshMappingsToolStripMenuItem.Text = "Refresh Mappings";
+            this.refreshMappingsToolStripMenuItem.Click += new System.EventHandler(this.refreshMappingsToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -227,11 +254,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label matchStatusLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem newMappingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pCDoctorToolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scriptGenerationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem runADHOCToolStripMenuItem;
         private System.Windows.Forms.ToolTip mainFormToolTips;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem newMappingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newMappingToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem runADHOCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editMappingxmlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshMappingsToolStripMenuItem;
     }
 }
 

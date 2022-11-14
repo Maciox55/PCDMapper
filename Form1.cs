@@ -18,7 +18,7 @@ namespace PCDMapper
     {
         private List<Control> m_lstControlsToValidate;
         Config config;
-        public List<Binding> bindings;
+        public List<Binding> bindings; // List of all current bindings from the Mappings.xml
         public bool matched = false;
         public Binding matchedBinding;
 
@@ -30,6 +30,10 @@ namespace PCDMapper
             //MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory);
             form1 = this;
             config = Config.Instance();
+            Console.WriteLine(Path.GetDirectoryName(config.GetMasterPath()));
+           
+
+
             bindings = ParseBindings(config.GetMasterPath());
 
             Console.WriteLine(bindings[0].title);
@@ -40,6 +44,7 @@ namespace PCDMapper
 
             m_lstControlsToValidate.Add(pnTextBox);
             m_lstControlsToValidate.Add(snTextBox);
+            
             
         }
 
@@ -119,9 +124,8 @@ namespace PCDMapper
 
             Console.WriteLine(result.Count<Binding>());
             List<Binding> list = result.ToList<Binding>();
+            this.Text ="PCD Mapper |    " +  list.Count + " Mappings Found";
             return list;
-
-
 
         }
 
@@ -158,6 +162,18 @@ namespace PCDMapper
                 addMappingForm.Show();
             }
         }
+
+        private void editMappingxmlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CMDR.GetProcess().RunApp("notepad.exe", config.GetMasterPath());
+        }
+
+        private void refreshMappingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindings = ParseBindings(config.GetMasterPath());
+        }
+
+        
 
     }
 }
