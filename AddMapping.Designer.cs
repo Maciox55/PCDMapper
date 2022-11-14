@@ -41,10 +41,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.addmapToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.addmapToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -162,6 +162,19 @@
             this.panel1.Size = new System.Drawing.Size(361, 169);
             this.panel1.TabIndex = 11;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(3, 9);
+            this.label7.MaximumSize = new System.Drawing.Size(350, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(319, 52);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "This section collects the information neccessary for matching user provided part " +
+    "number to mappings in Mappings.xml file.\r\n\r\nTitle field is only used for identif" +
+    "ication.";
+            // 
             // panel2
             // 
             this.panel2.AutoSize = true;
@@ -191,19 +204,6 @@
             this.label6.Text = "This section collects the necessary mapping information. \r\n\r\nThese fields must ma" +
     "tch the mappings added in PCDoctor Config section exactly as they appear.";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(3, 9);
-            this.label7.MaximumSize = new System.Drawing.Size(350, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(319, 52);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "This section collects the information neccessary for matching user provided part " +
-    "number to mappings in Mappings.xml file.\r\n\r\nTitle field is only used for identif" +
-    "ication.";
-            // 
             // AddMapping
             // 
             this.AcceptButton = this.addButton;
@@ -213,6 +213,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "AddMapping";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "New Mapping";
