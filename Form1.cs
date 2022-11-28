@@ -173,7 +173,17 @@ namespace PCDMapper
             bindings = ParseBindings(config.GetMasterPath());
         }
 
-        
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
 
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter) || (e.KeyCode == Keys.Return))
+            {
+                this.SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
     }
 }

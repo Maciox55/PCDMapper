@@ -61,6 +61,7 @@
             this.mainFormToolTips.SetToolTip(this.pnTextBox, "Part Number of the unit you are testing, used to find the necessary test script b" +
         "inding.");
             this.pnTextBox.TextChanged += new System.EventHandler(this.pnTextBox_TextChanged);
+            this.pnTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             // 
             // pnLabel
             // 
@@ -87,6 +88,7 @@
             this.snTextBox.Size = new System.Drawing.Size(146, 20);
             this.snTextBox.TabIndex = 2;
             this.mainFormToolTips.SetToolTip(this.snTextBox, "Serial Number of the unit being tested as it will appear on the test report.");
+            this.snTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             // 
             // startBtn
             // 
@@ -126,6 +128,7 @@
             this.testerName.Size = new System.Drawing.Size(177, 20);
             this.testerName.TabIndex = 0;
             this.mainFormToolTips.SetToolTip(this.testerName, "Tester Name as It will appear on the test report.");
+            this.testerName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             // 
             // panel1
             // 
@@ -182,7 +185,7 @@
             // newMappingToolStripMenuItem1
             // 
             this.newMappingToolStripMenuItem1.Name = "newMappingToolStripMenuItem1";
-            this.newMappingToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.newMappingToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
             this.newMappingToolStripMenuItem1.Text = "New Mapping";
             this.newMappingToolStripMenuItem1.ToolTipText = "Opens form for adding new mappings remotely.";
             this.newMappingToolStripMenuItem1.Click += new System.EventHandler(this.newMappingToolStripMenuItem_Click);
@@ -190,7 +193,7 @@
             // editMappingxmlToolStripMenuItem
             // 
             this.editMappingxmlToolStripMenuItem.Name = "editMappingxmlToolStripMenuItem";
-            this.editMappingxmlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editMappingxmlToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.editMappingxmlToolStripMenuItem.Text = "Edit Mappings.xml";
             this.editMappingxmlToolStripMenuItem.ToolTipText = "Edit the main mappings file remotely using notepad.";
             this.editMappingxmlToolStripMenuItem.Click += new System.EventHandler(this.editMappingxmlToolStripMenuItem_Click);
@@ -198,7 +201,7 @@
             // refreshMappingsToolStripMenuItem
             // 
             this.refreshMappingsToolStripMenuItem.Name = "refreshMappingsToolStripMenuItem";
-            this.refreshMappingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshMappingsToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.refreshMappingsToolStripMenuItem.Text = "Refresh Mappings";
             this.refreshMappingsToolStripMenuItem.ToolTipText = "Reloads the mappings from file. Required when file was edited externally.";
             this.refreshMappingsToolStripMenuItem.Click += new System.EventHandler(this.refreshMappingsToolStripMenuItem_Click);
@@ -216,7 +219,7 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
             this.toolStripMenuItem2.Text = "Generate Script Log";
             this.toolStripMenuItem2.ToolTipText = "Used to generate the capability list for use in creating test scripts.";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.scriptGenerationToolStripMenuItem_Click);
@@ -224,7 +227,7 @@
             // runADHOCToolStripMenuItem
             // 
             this.runADHOCToolStripMenuItem.Name = "runADHOCToolStripMenuItem";
-            this.runADHOCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.runADHOCToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.runADHOCToolStripMenuItem.Text = "Run Unmapped";
             this.runADHOCToolStripMenuItem.ToolTipText = "Starts a generic test script.";
             this.runADHOCToolStripMenuItem.Click += new System.EventHandler(this.runADHOCToolStripMenuItem_Click);
@@ -240,6 +243,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "PCD Mapper";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
